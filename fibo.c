@@ -10,11 +10,10 @@ int main()
 }
 
 unsigned fibo(unsigned n){
-  unsigned un = 1, deux = 0;
-  unsigned i;
-  for(i = 1; i<n; ++i)
-    {
-      un += deux;
-      deux = un - deux;
-    }
-  return 
+  unsigned curr = 1, prev = 0;
+  for (unsigned i=1; i < n; ++i) {
+      curr += prev;
+      prev = curr - prev;
+  }
+  return n > 1 ? curr : n;
+}
