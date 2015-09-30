@@ -11,8 +11,7 @@ int main()
 unsigned long fact(unsigned long n)
 {
   unsigned result = 1;
-  int i;
-  for(i = n ; i > 0; --i)
+  for(int i = n ; i > 0; --i)
     {
       result *= i;
     }
